@@ -1,0 +1,24 @@
+nav {
+    justify-content: space-between;
+}
+.no-flex-grow {
+    flex-grow: 0;
+}
+h3 {
+    text-align: center;
+}
+.headers, .data {
+    display: flex;
+    justify-content: space-around;
+}
+.name-data, .quantity-data {
+    display: flex;
+    flex-direction: column;
+}
+.managed-numbers {
+    display: flex;
+}
+.align-nav {
+    display: flex;
+    justify-content: space-between;
+}
