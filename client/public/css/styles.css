@@ -1,24 +1,21 @@
-nav {
-    justify-content: space-between;
-}
-.no-flex-grow {
-    flex-grow: 0;
-}
 h3 {
     text-align: center;
-}
-.headers, .data {
-    display: flex;
-    justify-content: space-around;
-}
-.name-data, .quantity-data {
-    display: flex;
-    flex-direction: column;
-}
-.managed-numbers {
-    display: flex;
 }
 .align-nav {
     display: flex;
     justify-content: space-between;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.grid-item {
+    justify-self: center;
+}
+.quantity {
+    display: inline-block;
+    min-width: 3em;
+    text-align: center;
 }
