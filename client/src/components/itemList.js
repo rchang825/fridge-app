@@ -53,10 +53,10 @@ export default function ItemList() {
  return (
    <div>
      <h3>Item List</h3>
-     <div class="grid-container">
-        <h5 class="grid-item">Name</h5>
-        <h5 class="grid-item">Quantity</h5>
-        {/* <h5 class="grid-item">Action</h5> */}
+     <div className="grid-container">
+        <h5 className="grid-item">Name</h5>
+        <h5 className="grid-item">Quantity</h5>
+        {/* <h5 className="grid-item">Action</h5> */}
      </div>
      <div>{itemList()}</div>
    </div>

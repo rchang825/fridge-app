@@ -4,8 +4,8 @@ h3 {
 .align-nav {
     display: flex;
     justify-content: space-between;
-    margin-left: 3%;
-    margin-right: 3%;
+    margin-left: 3vw;
+    margin-right: 3vw;
 }
 .grid-container {
     display: grid;
@@ -18,4 +18,15 @@ h3 {
     display: inline-block;
     min-width: 3em;
     text-align: center;
+}
+.no-link-style:link, .no-link-style:visited, .no-link-style:hover, .no-link-style:active {
+    text-decoration: none;
+    color: black;
+}
+.new-item-form {
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+.new-item-form input.btn {
+    margin-top: 2vw;
 }

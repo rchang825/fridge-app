@@ -63,21 +63,21 @@ const Item = (props) => {
     };
   
     //return item with editable name and quantity
-    return (<div class="grid-container">
+    return (<div className="grid-container">
      <p class="grid-item">
         {nameEditing ?
         <input value={itemName} autoFocus onChange={e => setItemName(e.target.value)} onBlur={handleNameBlur} /> :
         <span onClick={handleNameFocus}>{itemName}</span>}
       </p>
-     <p class="grid-item">
+     <p className="grid-item">
         <input type="button" id="decrement" value="-" onMouseDown={handleDec}/>
         {quantityEditing ? 
         <input value={itemQuantity} autoFocus onChange={e => setItemQuantity(e.target.value)} onBlur={handleQuantityBlur} /> : 
-        <span class="quantity" onClick={handleQuantityFocus}>{itemQuantity}</span>}
+        <span className="quantity" onClick={handleQuantityFocus}>{itemQuantity}</span>}
         <input type="button" id="increment" value="+" onMouseDown={handleInc}/>
     </p>    
      <p class="grid-item">
-       <button className="btn btn-link"
+       <button className="btn"
          onClick={() => {
            props.deleteItem(props.item._id);
          }}

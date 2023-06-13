@@ -8,6 +8,7 @@ import Navbar from "./components/navbar";
 import ItemList from "./components/itemList";
 // import Edit from "./components/edit";
 import Create from "./components/create";
+import New from "./components/new";
 
 const App = () => {
 return (
@@ -17,6 +18,7 @@ return (
       <Route exact path="/" element={<ItemList />} />
       {/* <Route path="/edit/:id" element={<Edit />} /> */}
       <Route path="/create" element={<Create />} />
+      
     </Routes>
   </div>
 );

@@ -19,7 +19,7 @@ export default function Create() {
  async function onSubmit(e) {
    e.preventDefault();
  
-   // When a post request is sent to the create url, we'll add a new record to the database.
+   // When a post request is sent to the create url, we'll add a new item to the database.
    const newItem = { ...form };
  
    await fetch("http://localhost:5050/item", {
@@ -42,7 +42,7 @@ export default function Create() {
  return (
    <div>
      <h3>Add New Item</h3>
-     <form onSubmit={onSubmit}>
+     <form className="new-item-form" onSubmit={onSubmit}>
        <div className="form-group">
          <label htmlFor="name">Name</label>
          <input
