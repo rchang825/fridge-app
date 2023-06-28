@@ -7,6 +7,7 @@ const router = express.Router();
 // This section will help you get a list of all the items.
 router.get("/", async (req, res) => {
   let collection = await db.collection("items");
+
   let results = await collection.find({}).toArray();
   res.send(results).status(200);
 });
@@ -25,7 +26,8 @@ router.get("/:id", async (req, res) => {
 router.post("/", async (req, res) => {
   let newDocument = {
     name: req.body.name,
-    quantity: req.body.quantity
+    quantity: req.body.quantity,
+    listId: req.body.listId
   };
   let collection = await db.collection("items");
   let result = await collection.insertOne(newDocument);

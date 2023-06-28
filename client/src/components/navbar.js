@@ -1,7 +1,19 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
- 
-export default function Navbar() {
+import { createList } from "../apis/list";
+import { useNavigate } from "react-router-dom";
+
+export default function Navbar({ listId }) {
+    const navigate = useNavigate();
+    const clickHandler = async () => {
+        //call list API to create new list
+        const response = await createList();
+        //get id of new list
+        const listId = response.insertedId;
+        //redirect to new list page
+        navigate(`/list/${listId}`);
+    };
+    
  return (
    <div>
      <nav className="align-nav navbar">
@@ -11,12 +23,12 @@ export default function Navbar() {
         {/* <div id="navbarNav"> */}
             <ul className="nav justify-content-end">
                 <li className="nav-item">
-                    <a className="nav-link no-link-style" href="/new">
+                    <span onClick={clickHandler}>
                         Start New List
-                    </a>
+                    </span>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link no-link-style" href="/create">
+                    <a className="nav-link no-link-style" href={`/list/${listId}/create`}>
                         Add New Item
                     </a>
                 </li>

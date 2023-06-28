@@ -2,14 +2,15 @@ import React, { useEffect, useState } from "react";
 // import { Link } from "react-router-dom";
 import Item from "./item";
 
+
  
-export default function ItemList() {
+export default function ItemList({ listId }) {
  const [items, setItems] = useState([]);
  
  //fetch list of items from the database.
  useEffect(() => {
    async function getItems() {
-     const response = await fetch(`http://localhost:5050/item/`);
+     const response = await fetch(`http://localhost:5050/list/${listId}/items`);
  
      if (!response.ok) {
        const message = `Error: ${response.statusText}`;
@@ -24,7 +25,7 @@ export default function ItemList() {
    getItems();
  
    return;
- }, [items.length]);
+ }, [items.length, listId]);
  
  //delete item using id
  async function deleteItem(id) {
