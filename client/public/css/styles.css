@@ -1,11 +1,12 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
 h3 {
     text-align: center;
 }
 .align-nav {
     display: flex;
     justify-content: space-between;
-    margin-left: 3vw;
-    margin-right: 3vw;
 }
 .grid-container {
     display: grid;
@@ -19,7 +20,7 @@ h3 {
     min-width: 3em;
     text-align: center;
 }
-.no-link-style:link, .no-link-style:visited, .no-link-style:hover, .no-link-style:active {
+.no-link-style, .no-link-style:link, .no-link-style:visited, .no-link-style:hover, .no-link-style:active {
     text-decoration: none;
     color: black;
 }
@@ -29,4 +30,33 @@ h3 {
 }
 .new-item-form input.btn {
     margin-top: 2vw;
+}
+.clickable {
+    cursor: pointer;
+}
+.nav-ul {
+    display: flex;
+    align-items: flex-end;
+    margin: 0;
+}
+.nav-li-item {
+    list-style-type: none;
+    margin: 1vw;
+}
+.nav-li-item p {
+    margin: 0;
+}
+.nav-brand {
+    margin: 1vw;
+}
+.align-component {
+    margin: 1vw;
+}
+#item-list {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.centered {
+    width: 40vw;
+    margin: 0 auto;
 }

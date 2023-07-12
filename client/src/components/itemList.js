@@ -52,12 +52,14 @@ export default function ItemList({ listId }) {
  
  // return created list, styled in a table
  return (
-   <div>
+   <div id="item-list">
+    <p className="align-component">Make sure to save the current link or list ID to reaccess this page later! <br></br>
+    Your list ID is <strong>{listId}</strong> <br></br></p>
+
      <h3>Item List</h3>
      <div className="grid-container">
         <h5 className="grid-item">Name</h5>
         <h5 className="grid-item">Quantity</h5>
-        {/* <h5 className="grid-item">Action</h5> */}
      </div>
      <div>{itemList()}</div>
    </div>

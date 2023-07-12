@@ -13,8 +13,6 @@ async function createList () {
     } catch (error) {
         console.log(error);
     }
-
-    //return list
 }
 
 export { createList };

@@ -45,7 +45,7 @@ export default function Create() {
  
  // This following section will display the form that takes the input from the user.
  return (
-   <div>
+   <div className="align-component">
      <h3>Add New Item</h3>
      <form className="new-item-form" onSubmit={onSubmit}>
        <div className="form-group">

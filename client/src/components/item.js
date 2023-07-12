@@ -40,7 +40,6 @@ const Item = (props) => {
     }
   
     useEffect(() => {
-      console.log("props: ", props);
       setItemName(props.item.name);
       setItemQuantity(props.item.quantity);
       
@@ -52,13 +51,11 @@ const Item = (props) => {
         props.deleteItem(props.item._id);
       }
       setItemQuantity(newQuantity);
-      console.log("quantity decremented! now: ", newQuantity);
       updateDetails(itemName, newQuantity);
     };
     function handleInc() {
       const newQuantity = Number(itemQuantity) + 1;
       setItemQuantity(newQuantity);
-      console.log("quantity incremented! now: ", newQuantity);
       updateDetails(itemName, newQuantity);
     };
   

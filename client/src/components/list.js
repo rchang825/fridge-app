@@ -8,7 +8,6 @@ export default function List() {
 
     return <div>
         <Navbar listId={listId} />
-            <h1>this is a list</h1>
             <ItemList listId={listId}/>
         </div>;
 }

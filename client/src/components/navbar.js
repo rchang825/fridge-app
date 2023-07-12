@@ -1,7 +1,7 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.css";
 import { createList } from "../apis/list";
 import { useNavigate } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.css";
 
 export default function Navbar({ listId }) {
     const navigate = useNavigate();
@@ -16,24 +16,27 @@ export default function Navbar({ listId }) {
     
  return (
    <div>
-     <nav className="align-nav navbar">
-        <a className="navbar-brand" href="/">
+     <nav className="align-nav nav">
+        <a className="no-link-style nav-brand" href="/">
             Fridge Contents
         </a>
-        {/* <div id="navbarNav"> */}
-            <ul className="nav justify-content-end">
-                <li className="nav-item">
-                    <span onClick={clickHandler}>
-                        Start New List
-                    </span>
+        <div id="">
+            <ul className="justify-content-end nav-ul">
+                 <li className="nav-li-item">
+                    <p className="clickable" onClick={clickHandler}> 
+                        New List
+                    </p>                        
+
                 </li>
-                <li className="nav-item">
-                    <a className="nav-link no-link-style" href={`/list/${listId}/create`}>
-                        Add New Item
-                    </a>
-                </li>
+                {listId ?
+                    <li className="nav-li-item">
+                        <a className="no-link-style" href={`/list/${listId}/create`}>
+                            Add New Item
+                        </a>
+                    </li> 
+                    : null   }                 
             </ul>
-        {/* </div> */}
+        </div>
      </nav>
    </div>
  );
