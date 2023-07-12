@@ -1,4 +1,4 @@
-const hostname = 'http://localhost:5050';
+const hostname = process.env.HOST_NAME;
 async function createList () {
     //post request for new list link
     const endpoint = `${hostname}/list`;
